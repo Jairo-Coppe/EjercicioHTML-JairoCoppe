@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/index.css">
+    <title>Suma con JS</title>
+</head>
+<body>
+    <h3>Calculadora</h3>
+    <div class="FirstContainer">
+        <input class="input" type="text" placeholder="Ingrese un numero" id="inputNumeros" required>
+        <p>+</p>
+        <input class="input" type="text" placeholder="Ingrese un numero" id="inputNumeross" required>
+
+        <button onclick="getNumbers()">Calcular</button>
+    </div>
+    <!-- Cambiamos la importación de SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function getNumbers() {
+            var inputValorF = document.getElementById("inputNumeros").value;
+            var numero = parseFloat(inputValorF);
+            var inputValorS = document.getElementById("inputNumeross").value;
+            var numeroo = parseFloat(inputValorS);
+
+            var firstNumber = numero;
+            var secondNumber = numeroo;
+
+            var result = firstNumber + secondNumber;
+            
+            // Usamos Swal directamente sin necesidad de importación
+            Swal.fire({
+                title: "El resultado de la suma es:",
+                text: result.toString(),
+                icon: "success",
+                confirmButtonText: "Cool"
+            });
+        }
+    </script>
+</body>
+</html>

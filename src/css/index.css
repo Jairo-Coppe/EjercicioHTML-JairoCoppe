@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Exo", sans-serif;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.FirstContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    margin: 15px;
+}
